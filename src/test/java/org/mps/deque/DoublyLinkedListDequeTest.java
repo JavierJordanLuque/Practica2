@@ -4,22 +4,24 @@ import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-/* Test Cases
-    1. Prepend {1} in an empty DoublyLinkedListDeque -> First = 1, Last = 1, Size = 1
-    2. Prepend {2} in a non-empty DoublyLinkedListDeque with one element {10} -> First = 2, Last = 10, Size = 2
-    3. Append {3} in of an empty DoublyLinkedListDeque -> First = 3, Last = 3, Size = 1
-    4. Append {4} in a non-empty DoublyLinkedListDeque with one element {11} -> First = 11, Last = 4, Size = 2
-    5. Delete first element from an empty DoublyLinkedListDeque -> DoubleEndedQueueException
-    6. Delete first element from a non-empty DoublyLinkedListDeque {6, 7} -> First = 7, Last = 7, Size = 1
-    7. Delete last element from an empty DoublyLinkedListDeque -> DoubleEndedQueueException
-    8. Delete last element from a non-empty DoublyLinkedListDeque with two elements {8, 9} -> First = 8, Last = 8, Size = 1
-    9. First element from an empty DoublyLinkedListDeque -> DoubleEndedQueueException
-    10. First element from a non-empty DoublyLinkedListDeque with two elements {10, 11} -> First = 10, Size = 2
-    11. Last element from an empty DoublyLinkedListDeque -> DoubleEndedQueueException
-    12. Last element from a non-empty DoublyLinkedListDeque with two elements {12, 13} -> Last = 13, Size = 2
-    13. Size of an empty DoublyLinkedListDeque -> Size = 0
-    14. Size of a non-empty DoublyLinkedListDeque with two elements {14, 15, 16, 17} -> Size = 4
-     */
+/** Test Cases
+ * 1. Prepend {1} in an empty DoublyLinkedListDeque -> First = 1, Last = 1, Size = 1
+ * 2. Prepend {2} in a non-empty DoublyLinkedListDeque with one element {10} -> First = 2, Last = 10, Size = 2
+ * 3. Append {3} in of an empty DoublyLinkedListDeque -> First = 3, Last = 3, Size = 1
+ * 4. Append {4} in a non-empty DoublyLinkedListDeque with one element {11} -> First = 11, Last = 4, Size = 2
+ * 5. Delete first element from an empty DoublyLinkedListDeque -> DoubleEndedQueueException
+ * 6. Delete first element from a non-empty DoublyLinkedListDeque {6, 7} -> First = 7, Last = 7, Size = 1
+ * 7. Delete last element from an empty DoublyLinkedListDeque -> DoubleEndedQueueException
+ * 8. Delete last element from a non-empty DoublyLinkedListDeque with two elements {8, 9} -> First = 8, Last = 8, Size = 1
+ * 9. First element from an empty DoublyLinkedListDeque -> DoubleEndedQueueException
+ * 10. First element from a non-empty DoublyLinkedListDeque with two elements {10, 11} -> First = 10, Size = 2
+ * 11. Last element from an empty DoublyLinkedListDeque -> DoubleEndedQueueException
+ * 12. Last element from a non-empty DoublyLinkedListDeque with two elements {12, 13} -> Last = 13, Size = 2
+ * 13. Size of an empty DoublyLinkedListDeque -> Size = 0
+ * 14. Size of a non-empty DoublyLinkedListDeque with two elements {14, 15, 16, 17} -> Size = 4
+ *
+ * @author Javier Jordán Luque
+ */
 
 @DisplayName("DoublyLinkedListDeque tests")
 class DoublyLinkedListDequeTest {
