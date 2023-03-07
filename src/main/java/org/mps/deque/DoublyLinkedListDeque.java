@@ -41,7 +41,7 @@ public class DoublyLinkedListDeque<T> implements DoubleEndedQueue<T> {
     @Override
     public void deleteFirst() {
         if (size() == 0) {
-            throw new DoubleEndedQueueException("Attempt to delete the first element from an empty DoubleLinkedListDeque");
+            throw new DoubleEndedQueueException("Attempt to delete the first element from an empty DoublyLinkedListDeque");
         }
         DequeNode<T> aux = first;
         first = aux.getNext();
@@ -53,7 +53,7 @@ public class DoublyLinkedListDeque<T> implements DoubleEndedQueue<T> {
     @Override
     public void deleteLast() {
         if (size() == 0) {
-            throw new DoubleEndedQueueException("Attempt to delete the last element from an empty DoubleLinkedListDeque");
+            throw new DoubleEndedQueueException("Attempt to delete the last element from an empty DoublyLinkedListDeque");
         }
         DequeNode<T> aux = last;
         last = aux.getPrevious();
@@ -65,7 +65,7 @@ public class DoublyLinkedListDeque<T> implements DoubleEndedQueue<T> {
     @Override
     public T first() {
         if (size() == 0) {
-            throw new DoubleEndedQueueException("Attempt to get the first element from an empty DoubleLinkedListDeque");
+            throw new DoubleEndedQueueException("Attempt to get the first element from an empty DoublyLinkedListDeque");
         }
         return first.getItem();
     }
@@ -73,7 +73,7 @@ public class DoublyLinkedListDeque<T> implements DoubleEndedQueue<T> {
     @Override
     public T last() {
         if (size() == 0) {
-            throw new DoubleEndedQueueException("Attempt to get the last element from an empty DoubleLinkedListDeque");
+            throw new DoubleEndedQueueException("Attempt to get the last element from an empty DoublyLinkedListDeque");
         }
         return last.getItem();
     }
