@@ -1,11 +1,21 @@
 package org.mps.deque;
 
+/**
+ * Class implementing the interface DoubleEndedQueue. It is a linear collection of DequeNodes which supports the insertion and deletion from both ends.
+ *
+ * @param <T> the type of elements held in the DoubleEndedQueue
+ * @author Lucia Gutierrez Molina
+ * @author Javier Jordan Luque
+ */
 public class DoublyLinkedListDeque<T> implements DoubleEndedQueue<T> {
 
     private DequeNode<T> first;
     private DequeNode<T> last;
     private int size;
 
+    /**
+     * Default constructor of the class. It creates an empty DoublyLinkedListDeque, with size 0 and null elements.
+     */
     public DoublyLinkedListDeque() {
         first = null;
         last = null;

@@ -1,5 +1,6 @@
 package org.mps.deque;
 
+<<<<<<< HEAD
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -25,6 +26,8 @@ import static org.junit.jupiter.api.Assertions.*;
     16. Size of a non-empty DoublyLinkedListDeque with two elements {12, 13} -> Returns 2
      */
 
+=======
+>>>>>>> b5c718ab8d4a10d308a82f587ecd3ac4abb68131
 class DoublyLinkedListDequeTest {
 
     DoublyLinkedListDeque<Integer> list;
