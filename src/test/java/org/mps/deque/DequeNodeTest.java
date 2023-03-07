@@ -1,5 +1,12 @@
 package org.mps.deque;
 
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Nested;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
+
 /**
  * Test cases:
  * 1. getItem of a DequeNode with a "1" returns "1"
@@ -27,6 +34,51 @@ package org.mps.deque;
  *
  * @author Lucia Gutierrez Molina
  */
+@DisplayName("First, we create a DequeNode")
 class DequeNodeTest {
 
+    @Nested
+    @DisplayName("When getting an item")
+    class GetItemTest {
+        @Test
+        @DisplayName("If the item stored was 1, then we should obtain a 1.")
+        void getItemOf1Returns1() {
+            DequeNode<Integer> createdNodeWithA1 = new DequeNode<>(1, null, null);
+            int expectedGetItemValue = 1;
+            int actualGetItemValue = createdNodeWithA1.getItem();
+            assertEquals(expectedGetItemValue, actualGetItemValue);
+        }
+
+        @Test
+        @DisplayName("If the item stored was null, then we should obtain null.")
+        void getItemOfNullReturnsNull() {
+            DequeNode<Integer> createdNodeWithNull = new DequeNode<>(null, null, null);
+            Object actualGetItemValue = createdNodeWithNull.getItem();
+            assertNull(actualGetItemValue);
+        }
+    }
+
+    @Nested
+    @DisplayName("When setting an item")
+    class SetItemTest {
+        @Test
+        @DisplayName("If there was no item previously stored and a 1 is set, then a 1 should be stored")
+        void setItemOf1Stores1() {
+            DequeNode<Integer> createdNode = new DequeNode<>(null, null, null);
+            createdNode.setItem(1);
+            int expectedGetItemValue = 1;
+            int actualGetItemValue = createdNode.getItem();
+            assertEquals(expectedGetItemValue, actualGetItemValue);
+        }
+
+        @Test
+        @DisplayName("If there was an item inside the Node, it overrides it")
+        void setItemWithItemOverridesIt() {
+            DequeNode<Integer> createdNodeWithItem = new DequeNode<>(2, null, null);
+            createdNodeWithItem.setItem(1);
+            int expectedGetItemValue = 1;
+            int actualGetItemValue = createdNodeWithItem.getItem();
+            assertEquals(expectedGetItemValue, actualGetItemValue);
+        }
+    }
 }
